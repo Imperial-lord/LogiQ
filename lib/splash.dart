@@ -27,16 +27,16 @@ class Splash extends State<SplashScreen> {
   }
 }
 
-class SplashScreenContent extends StatelessWidget{
+class SplashScreenContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment(-1.0, -1.0),
-            end: Alignment(1.0, 1.0),
-            colors: [Colors.black, Colors.blue[700]],
-          )),
+        begin: Alignment(-1.0, -1.0),
+        end: Alignment(1.0, 1.0),
+        colors: [Colors.black, Colors.blue[700]],
+      )),
       child: Center(
         child: Column(children: <Widget>[
           Padding(
@@ -54,20 +54,20 @@ class SplashScreenContent extends StatelessWidget{
               'LogiQ',
               style: GoogleFonts.varelaRound(
                   textStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 50.0,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Colors.white,
+                fontSize: 50.0,
+                fontWeight: FontWeight.bold,
+              )),
             ),
           ),
           Text(
             'Experience logic like never before!',
             style: GoogleFonts.varelaRound(
                 textStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.normal,
-                )),
+              color: Colors.white,
+              fontSize: 15.0,
+              fontWeight: FontWeight.normal,
+            )),
           ),
           Padding(
             padding: EdgeInsets.only(top: 150.0),
@@ -81,4 +81,3 @@ class SplashScreenContent extends StatelessWidget{
     );
   }
 }
-
