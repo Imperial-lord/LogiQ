@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:animations/animations.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animations/loading_animations.dart';
@@ -22,7 +21,7 @@ class Splash extends State<SplashScreen> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => NextScreen())));
+            builder: (BuildContext context) => WelcomeScreen())));
 
     return SplashScreenContent();
   }
@@ -36,7 +35,7 @@ class SplashScreenContent extends StatelessWidget{
           gradient: LinearGradient(
             begin: Alignment(-1.0, -1.0),
             end: Alignment(1.0, 1.0),
-            colors: [Colors.black, Colors.blue],
+            colors: [Colors.black, Colors.blue[700]],
           )),
       child: Center(
         child: Column(children: <Widget>[
@@ -56,10 +55,19 @@ class SplashScreenContent extends StatelessWidget{
               style: GoogleFonts.varelaRound(
                   textStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 60.0,
-                    fontWeight: FontWeight.normal,
+                    fontSize: 50.0,
+                    fontWeight: FontWeight.bold,
                   )),
             ),
+          ),
+          Text(
+            'Experience logic like never before!',
+            style: GoogleFonts.varelaRound(
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.normal,
+                )),
           ),
           Padding(
             padding: EdgeInsets.only(top: 150.0),
