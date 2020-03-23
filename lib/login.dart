@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:inquestoflogic/facebook.dart';
 import 'package:inquestoflogic/welcome.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 import 'package:inquestoflogic/join.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:inquestoflogic/google.dart';
+import 'package:inquestoflogic/first_screen.dart';
 
 final _text = <String>['Log In with Facebook', 'Log In with Google'];
 
@@ -142,7 +145,29 @@ Widget getRaisedButtonContents(String text, FaIcon faIcon, BuildContext context,
       alignment: Alignment.bottomCenter,
       child: RaisedButton.icon(
           onPressed: () {
-            print('To integrate Firebase Log In');
+            if(text=='Log In with Google') {
+              signInWithGoogle().whenComplete(() {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return FirstScreen();
+                    },
+                  ),
+                );
+              });
+            }
+            else{
+              print('To integrate Firebase Log In with FB');
+              signInWithFacebook().whenComplete(() {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return FirstScreen();
+                    },
+                  ),
+                );
+              });
+            }
           },
           color: Colors.white,
           icon: faIcon,

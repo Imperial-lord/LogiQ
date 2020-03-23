@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inquestoflogic/splash.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: appName,
       home: Scaffold(
-        body: SplashScreen(),
+        body: SplashScreen(), //--> this is our ongoing project
       ),
     );
   }

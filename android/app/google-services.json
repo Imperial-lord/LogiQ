@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "785216713961",
+    "firebase_url": "https://logiq-techno20.firebaseio.com",
+    "project_id": "logiq-techno20",
+    "storage_bucket": "logiq-techno20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785216713961:android:491e5e4bbb4a811198ec78",
+        "android_client_info": {
+          "package_name": "com.example.inquestoflogic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785216713961-q7gfovd4etbg3cc0k9osmfn74ubbie4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.inquestoflogic",
+            "certificate_hash": "4297f9b93925d95b557718c14c47499005268cc0"
+          }
+        },
+        {
+          "client_id": "785216713961-68utk1vks6c5fet6lm7i5sa3uu0ivgeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5_Xvq71v4ErjQA4ldjsw18sdOywV8n2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785216713961-68utk1vks6c5fet6lm7i5sa3uu0ivgeh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
