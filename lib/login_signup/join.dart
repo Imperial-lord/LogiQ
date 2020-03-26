@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:inquestoflogic/welcome.dart';
+import 'package:inquestoflogic/login_signup//welcome.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:inquestoflogic/google.dart';
-import 'package:inquestoflogic/first_screen.dart';
-import 'package:inquestoflogic/facebook.dart';
+import 'package:inquestoflogic/login_signup/google.dart';
+import 'package:inquestoflogic/app/first_screen.dart';
+import 'package:inquestoflogic/login_signup/facebook.dart';
+import 'package:inquestoflogic/app/screen1.dart';
 
 final _text = <String>['Sign in with Facebook', 'Sign in with Google'];
 

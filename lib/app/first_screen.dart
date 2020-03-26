@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:inquestoflogic/welcome.dart';
-import 'package:inquestoflogic/google.dart';
-import 'package:inquestoflogic/facebook.dart';
+import 'package:inquestoflogic/login_signup/welcome.dart';
+import 'package:inquestoflogic/login_signup/google.dart';
+import 'package:inquestoflogic/login_signup/facebook.dart';
 
 var type;
 String imageUrl;
 String name;
 String email;
 
-class FirstScreen extends StatelessWidget {
+class FirstScreenOne extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     if (type == 'google') {

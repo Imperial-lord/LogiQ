@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animations/loading_animations.dart';
-import 'package:inquestoflogic/welcome.dart';
+import 'package:inquestoflogic/login_signup/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -35,7 +35,7 @@ class SplashScreenContent extends StatelessWidget {
           gradient: LinearGradient(
         begin: Alignment(-1.0, -1.0),
         end: Alignment(1.0, 1.0),
-        colors: [Colors.black, Colors.blue[700]],
+        colors: [Colors.blue[900],Colors.lightBlueAccent[700]],
       )),
       child: Center(
         child: Column(children: <Widget>[
@@ -44,12 +44,12 @@ class SplashScreenContent extends StatelessWidget {
             child: Image(
               image: AssetImage('assets/images/logo.png'),
               color: Colors.white,
-              height: 150.0,
-              width: 150.0,
+              height: 120.0,
+              width: 120.0,
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 20.0),
+            padding: EdgeInsets.only(top: 10.0,bottom: 5.0),
             child: Text(
               'LogiQ',
               style: GoogleFonts.varelaRound(

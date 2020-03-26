@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:inquestoflogic/facebook.dart';
-import 'package:inquestoflogic/welcome.dart';
+import 'package:inquestoflogic/login_signup/facebook.dart';
+import 'package:inquestoflogic/login_signup/welcome.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
-import 'package:inquestoflogic/join.dart';
+import 'package:inquestoflogic/login_signup/join.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:inquestoflogic/google.dart';
-import 'package:inquestoflogic/first_screen.dart';
+import 'package:inquestoflogic/login_signup/google.dart';
+import 'package:inquestoflogic/app/first_screen.dart';
+import 'package:inquestoflogic/app/screen1.dart';
 
 final _text = <String>['Log In with Facebook', 'Log In with Google'];
 

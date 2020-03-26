@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:inquestoflogic/first_screen.dart';
+import 'package:inquestoflogic/app/screen1.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final FacebookLogin facebookLogin = FacebookLogin();

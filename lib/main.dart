@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inquestoflogic/splash.dart';
+import 'package:inquestoflogic/login_signup/splash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {

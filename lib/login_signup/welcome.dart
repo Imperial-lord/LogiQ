@@ -6,9 +6,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
-import 'package:inquestoflogic/login.dart';
-import 'package:inquestoflogic/join.dart';
-import 'package:double_back_to_close_app/double_back_to_close_app.dart';
+import 'package:inquestoflogic/login_signup/login.dart';
+import 'package:inquestoflogic/login_signup/join.dart';
 
 
 class WelcomeScreen extends StatefulWidget {
