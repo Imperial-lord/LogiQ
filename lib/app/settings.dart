@@ -86,7 +86,7 @@ class _SettingsState extends State<Settings> {
               _getDividerSettings(),
               _getOtherRowsSettings(
                   'Privacy',
-                  FontAwesomeIcons.lockOpen,
+                  FontAwesomeIcons.unlock,
                   FontAwesomeIcons.angleRight,
                   Colors.deepOrange,
                   20.0,
@@ -109,7 +109,7 @@ class _SettingsState extends State<Settings> {
     );
   }
 
-  _getCupertinoRows(String text, IconData faIcon1, IconData faIcon2,
+   _getCupertinoRows(String text, IconData faIcon1, IconData faIcon2,
       Color color, double size, bool _switch) {
     return MergeSemantics(
       child: ListTile(
