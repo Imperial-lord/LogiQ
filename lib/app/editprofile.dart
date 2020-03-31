@@ -10,6 +10,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:inquestoflogic/app/screen1.dart';
 
+String title='Imperial_lord';
+String city='Bhubaneswar';
+String country='India';
+
 class EditProfile extends StatefulWidget {
   @override
   _EditProfileState createState() => _EditProfileState();
@@ -100,13 +104,13 @@ class _EditProfileState extends State<EditProfile> {
                 0.0,
               ),
               _getDividerEditProfile(),
-              _getOtherRowsEditProfile('Beginner', FontAwesomeIcons.hatCowboy,
+              _getOtherRowsEditProfile(title, FontAwesomeIcons.hatCowboy,
                   FontAwesomeIcons.angleRight, Colors.black87, 15.0),
               _getDividerEditProfile(),
-              _getOtherRowsEditProfile('Bhubaneswar', FontAwesomeIcons.city,
+              _getOtherRowsEditProfile(city, FontAwesomeIcons.city,
                   FontAwesomeIcons.angleRight, Colors.black45, 0.0),
               _getDividerEditProfile(),
-              _getOtherRowsEditProfile('India', FontAwesomeIcons.streetView,
+              _getOtherRowsEditProfile(country, FontAwesomeIcons.streetView,
                   FontAwesomeIcons.angleRight, Colors.green[400], 15.0),
               _getDividerEditProfile(),
               _getOtherRowsEditProfile(

@@ -14,7 +14,7 @@ String text1 =
     'Technothlon is an international school championship organized by the student fraternity of IIT Guwahati. Technothlon began in 2004 in a small room with an aim to "Inspire Young Minds". Starting on our journey with a participation of 200 students confined to the city of Guwahati, over the past 15 years we have expanded our reach to over 400 cities all over India and various centers abroad.';
 String text2 =
     'LogiQ brought to you by Techothlon, is an attempt to provide an open paltform for everyone to come and experience logic and analytical thinking, that we promote and stand for! Hope you have a great time playing the quizzes.';
-String text3 = '<To register or learn more about us, pay us a visit here>';
+String text3 = 'To register or learn more about us, pay us a visit here';
 
 class _AboutUsState extends State<AboutUs> {
   @override

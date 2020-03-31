@@ -8,6 +8,7 @@ import 'package:inquestoflogic/login_signup/facebook.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:inquestoflogic/app/settings.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:inquestoflogic/app/profiletab.dart';
 
 var type;
 String imageUrl;
@@ -28,101 +29,105 @@ class FirstScreen extends StatelessWidget {
     }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: FaIcon(
-              FontAwesomeIcons.cogs,
-              color: Colors.white,
+      home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            leading: IconButton(
+              icon: FaIcon(
+                FontAwesomeIcons.cogs,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                print('Settings button');
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.leftToRight,
+                        duration: Duration(milliseconds: 500),
+                        child: Settings()));
+              },
             ),
+            title: Text(
+              'LogiQ',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.varelaRound(
+                  textStyle: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+                color: Colors.white,
+              )),
+            ),
+            backgroundColor: Colors.lightBlueAccent[700],
+            actions: <Widget>[
+              IconButton(
+                icon: FaIcon(
+                  FontAwesomeIcons.search,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  print('Search Topics');
+                },
+              ),
+              IconButton(
+                icon: FaIcon(
+                  FontAwesomeIcons.calendar,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  print('Calendar Icon');
+                },
+              )
+            ],
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          floatingActionButton: FloatingActionButton(
+            child: Center(
+              child: Image(
+                image: AssetImage('assets/images/logo.png'),
+                width: 40,
+                height: 40,
+                color: Colors.white,
+              ),
+            ),
+            backgroundColor: Colors.lightBlueAccent[700],
+            elevation: 20.0,
             onPressed: () {
-              print('Settings button');
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      type: PageTransitionType.leftToRight,
-                      duration: Duration(milliseconds: 500),
-                      child: Settings()));
+              print('Technothlon Logo');
             },
           ),
-          title: Text(
-            'LogiQ',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.varelaRound(
-                textStyle: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.normal,
-              color: Colors.white,
-            )),
-          ),
-          backgroundColor: Colors.lightBlueAccent[700],
-          actions: <Widget>[
-            IconButton(
-              icon: FaIcon(
-                FontAwesomeIcons.search,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                print('Search Topics');
-              },
-            ),
-            IconButton(
-              icon: FaIcon(
-                FontAwesomeIcons.calendar,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                print('Calendar Icon');
-              },
-            )
-          ],
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          child: Center(
-            child: Image(
-              image: AssetImage('assets/images/logo.png'),
-              width: 40,
-              height: 40,
-              color: Colors.white,
-            ),
-          ),
-          backgroundColor: Colors.lightBlueAccent[700],
-          elevation: 20.0,
-          onPressed: () {
-            print('Technothlon Logo');
-          },
-        ),
-        bottomNavigationBar: BottomAppBar(
-          clipBehavior: Clip.antiAlias,
-          color: Colors.lightBlueAccent[700],
-          shape: CircularNotchedRectangle(),
-          child: Material(
-            child: SizedBox(
-              width: double.infinity,
-              height: 50.0,
-              child: new DefaultTabController(
-                length: 2,
-                child: new TabBar(
-                  indicatorColor: Colors.lightBlueAccent[700],
-                  labelColor: Colors.lightBlueAccent[700],
-                  labelStyle: GoogleFonts.varelaRound(
-                    fontWeight: FontWeight.normal,
-                  ),
-                  tabs: <Widget>[
-                    new Tab(
-                      text: 'Profile',
+          bottomNavigationBar: BottomAppBar(
+            clipBehavior: Clip.antiAlias,
+            shape: CircularNotchedRectangle(),
+            child: Material(
+              child: SizedBox(
+                width: double.infinity,
+                height: 50.0,
+                  child: new TabBar(
+                    indicatorColor: Colors.lightBlueAccent[700],
+                    labelColor: Colors.lightBlueAccent[700],
+                    labelStyle: GoogleFonts.varelaRound(
+                      fontWeight: FontWeight.normal,
                     ),
-                    new Tab(
-                      text: 'Topics',
-                    )
-                  ],
+                    tabs: <Widget>[
+                      new Tab(
+                        text: 'Profile',
+                      ),
+                      new Tab(
+                        text: 'Topics',
+                      )
+                    ],
+                  ),
                 ),
-              ),
             ),
           ),
+          body: TabBarView(
+            children: [
+              ProfileTab(),
+              Icon(Icons.directions_transit),
+            ],
+          ),
         ),
-        body: Container(),
       ),
     );
   }
